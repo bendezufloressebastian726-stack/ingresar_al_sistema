@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso al Sistema - Centro de Prácticas</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #10375e;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .login-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: none;
+    }
+    .login-title {
+      color: #d11616;
+      font-weight: 800;
+      font-size: 1.85rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .login-subtitle {
+      color: #063c6b;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .form-label {
+      font-weight: 700;
+      color: #212529;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+    .form-control {
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      border: 1px solid #1b558f;
+      color: #495057;
+    }
+    .form-control::placeholder {
+      color: #2e5883;
+    }
+    .form-control:focus {
+      border-color: #0dfd2d;
+      box-shadow: 0 0 0 0.2rem rgba(198, 208, 223, 0.15);
+    }
+    .form-check-input {
+      border-radius: 4px;
+      width: 18px;
+      height: 18px;
+      margin-top: 1px;
+    }
+    .form-check-label {
+      font-size: 0.88rem;
+      color: #6c757d;
+      margin-left: 4px;
+    }
+    .btn-primary-custom {
+      background-color: #030a30;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #ffffff;
+      transition: background-color 0.2s ease;
+    }
+    .btn-primary-custom:hover {
+      background-color: #14abb1;
+    }
+    .forgot-link {
+      color: #002763;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .forgot-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="text-center">
+      <h2 class="login-title">Acceso al Sistema de EFSRT</h2>
+      <p class="login-subtitle">Ingresa tus credenciales institucionales</p>
+    </div>
+
+    <form onsubmit="event.preventDefault(); alert('Iniciando sesión...');">
+      <!-- Correo Electrónico -->
+      <div class="mb-4 text-start">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" placeholder="usuario@institucion" required>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="mb-4 text-start">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" placeholder="********" required>
+      </div>
+
+      <!-- Recordarme y Olvidaste tu contraseña -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="form-check d-flex align-items-center">
+          <input class="form-check-input" type="checkbox" id="remember">
+          <label class="form-check-label" for="remember">
+            Recordarme
+          </label>
+        </div>
+        <a href="#" class="forgot-link">¿No te acuerdas tu contraseña?</a>
+      </div>
+
+      <!-- Botón Iniciar Sesión -->
+      <button type="submit" class="btn btn-primary-custom w-100">Iniciar Sesión</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
